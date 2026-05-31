@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://([^/]*\\.)?(facebook\\.com|youtube\\.com|bridgebase\\.com|mbl\\.is|visir\\.is|cnbc\\.com|marketwatch\\.com|ruv\\.is|oilprice\\.com)(/|$).*",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]

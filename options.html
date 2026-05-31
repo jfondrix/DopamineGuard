@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Focus Extension Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f7f7f7;
+      color: #111;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    textarea {
+      width: 100%;
+      height: 260px;
+      font-size: 16px;
+      padding: 12px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 18px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .status {
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+
+    p {
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Focus Extension</h1>
+
+    <p>Enter one blocked site per line.</p>
+
+    <textarea id="sites"></textarea>
+
+    <button id="save">Save blocked sites</button>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
