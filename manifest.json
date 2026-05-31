@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Focus Extension",
-  "version": "1.1",
-  "description": "Blocks distracting websites.",
+  "name": "DopamineGuard",
+  "version": "1.2",
+  "description": "A simple local-only website blocker for intentional browsing.",
   "permissions": [
     "storage",
     "declarativeNetRequest"
@@ -15,7 +15,7 @@
   },
   "options_page": "options.html",
   "action": {
-    "default_title": "Focus Extension",
+    "default_title": "DopamineGuard",
     "default_popup": "options.html"
   }
 }
