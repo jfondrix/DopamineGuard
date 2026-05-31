@@ -4,9 +4,9 @@ const DEFAULT_SITES = [
   "bridgebase.com",
   "mbl.is",
   "visir.is",
+  "ruv.is",
   "cnbc.com",
   "marketwatch.com",
-  "ruv.is",
   "oilprice.com"
 ];
 
