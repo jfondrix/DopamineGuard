@@ -1,6 +1,6 @@
 # DopamineGuard
 
-A simple, free, local-only website blocker for Brave, Chrome, and Chromium browsers.
+A simple, free, local-only website blocker for Brave, Chrome, Edge, and other Chromium-based browsers.
 
 No ads.
 No accounts.
