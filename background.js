@@ -36,6 +36,22 @@ chrome.storage.onChanged.addListener(async (changes, area) => {
   }
 });
 
+chrome.storage.onChanged.addListener(async (changes, area) => {
+  if (area === "local" && changes.pauseResumeAt) {
+    const resumeAt = changes.pauseResumeAt.newValue;
+    if (resumeAt) {
+      const delayInMinutes = Math.max((resumeAt - Date.now()) / 60000, 0.1);
+      chrome.alarms.create("resumeBlocking", { delayInMinutes });
+    }
+  }
+});
+
+chrome.alarms.onAlarm.addListener(async (alarm) => {
+  if (alarm.name === "resumeBlocking") {
+    await chrome.storage.local.set({ enabled: true, pauseResumeAt: null });
+  }
+});
+
 async function updateBlockingRules() {
   const data = await chrome.storage.local.get(["blockedSites", "enabled"]);
   const sites = data.blockedSites || DEFAULT_SITES;

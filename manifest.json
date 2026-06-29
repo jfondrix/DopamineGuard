@@ -5,7 +5,8 @@
   "description": "A simple local-only website blocker for intentional browsing.",
   "permissions": [
     "storage",
-    "declarativeNetRequest"
+    "declarativeNetRequest",
+    "alarms"
   ],
   "host_permissions": [
     "<all_urls>"

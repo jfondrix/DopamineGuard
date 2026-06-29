@@ -50,15 +50,44 @@
       margin-bottom: 8px;
     }
 
-    .toggle {
-      margin-top: 10px;
-      font-size: 18px;
-    }
-
     .status {
       margin-top: 15px;
       font-weight: bold;
       color: green;
+    }
+
+    .mode-selector {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mode-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .mode-option input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .mode-option input[type="number"] {
+      width: 58px;
+      padding: 6px 8px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .mode-option span {
+      color: #555;
     }
 
     .small {
@@ -71,10 +100,23 @@
   <div class="box">
     <h1>DopamineGuard</h1>
 
-    <div class="toggle">
-      <input type="checkbox" id="enabled">
-      <label for="enabled" style="display:inline;font-weight:normal;">Enable blocking</label>
+    <div class="mode-selector">
+      <label class="mode-option">
+        <input type="radio" name="mode" id="modeActive">
+        Blocking active
+      </label>
+      <label class="mode-option">
+        <input type="radio" name="mode" id="modePause">
+        Pause for
+        <input type="number" id="pauseMinutes" min="1" max="60" value="3">
+        <span>minutes</span>
+      </label>
+      <label class="mode-option">
+        <input type="radio" name="mode" id="modeDisabled">
+        Disabled
+      </label>
     </div>
+    <div id="pauseStatus" class="status"></div>
 
     <label for="sites">Blocked sites</label>
     <p class="small">One site per line. Example: youtube.com</p>
